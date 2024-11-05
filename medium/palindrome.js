@@ -4,7 +4,19 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  // Convert the string to lowercase
+  const lowerStr = str.toLowerCase();
+
+  // Compare the string with its reverse
+  const reversedStr = lowerStr.split('').reverse().join('');
+
+  return lowerStr === reversedStr;
 }
 
 module.exports = isPalindrome;
+
+
+console.log(isPalindrome('Nan')); 
+console.log(isPalindrome('racecar'));
+console.log(isPalindrome('hello')); 
+console.log(isPalindrome('Nitin'));
